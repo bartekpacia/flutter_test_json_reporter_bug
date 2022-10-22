@@ -31,10 +31,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  void _decrementCounter() {
+    setState(() {
+      print('Decrementing counter fom $_counter to ${--_counter}');
+    });
+  }
+
   void _incrementCounter() {
     setState(() {
-      print('Incrementing counter fom $_counter to ${_counter + 1}');
-      _counter++;
+      print('Incrementing counter fom $_counter to ${++_counter}');
     });
   }
 
@@ -58,10 +63,21 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: _decrementCounter,
+            tooltip: 'Decrement',
+            child: const Icon(Icons.remove),
+          ),
+          const SizedBox(width: 16),
+          FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }
