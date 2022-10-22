@@ -5,7 +5,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, this.title = 'Flutter Demo Home Page'});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: title),
     );
   }
 }
@@ -45,6 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print('build() called with title ${widget.title}');
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
