@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp(counterSeed: 0));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, required this.counterSeed});
+
+  final int counterSeed;
 
   @override
   Widget build(BuildContext context) {
@@ -14,37 +16,49 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(
+        title: 'Flutter Demo Home Page',
+        counterSeed: counterSeed,
+      ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, required this.title, required this.counterSeed});
 
   final String title;
+  final int counterSeed;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int? _counter;
 
   void _decrementCounter() {
     setState(() {
-      print('Decrementing counter fom $_counter to ${--_counter}');
+      _counter ??= widget.counterSeed;
+      final previousCounter = _counter;
+      _counter = _counter! + 1;
+      print('Decrementing counter fom $previousCounter to $_counter');
     });
   }
 
   void _incrementCounter() {
     setState(() {
-      print('Incrementing counter fom $_counter to ${++_counter}');
+      _counter ??= widget.counterSeed;
+      final previousCounter = _counter;
+      _counter = _counter! - 1;
+      print('Decrementing counter fom $previousCounter to $_counter');
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    print('build()');
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
