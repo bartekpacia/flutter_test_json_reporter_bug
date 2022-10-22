@@ -1,0 +1,14 @@
+{"protocolVersion":"0.1.1","runnerVersion":null,"pid":34750,"type":"start","time":0}
+{"suite":{"id":0,"platform":"vm","path":"/Users/bartek/dev/random/flutter_test_json_reporter_bug/test/widget_test.dart"},"type":"suite","time":0}
+{"test":{"id":1,"name":"loading /Users/bartek/dev/random/flutter_test_json_reporter_bug/test/widget_test.dart","suiteID":0,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":0}
+{"count":1,"time":3,"type":"allSuites"}
+{"testID":1,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":1594}
+{"group":{"id":2,"suiteID":0,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":1595}
+{"group":{"id":3,"suiteID":0,"parentID":2,"name":"Counter","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":6,"column":3,"url":"file:///Users/bartek/dev/random/flutter_test_json_reporter_bug/test/widget_test.dart"},"type":"group","time":1596}
+{"test":{"id":4,"name":"Counter is incremented when plus is tapped","suiteID":0,"groupIDs":[2,3],"metadata":{"skip":false,"skipReason":null},"line":154,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":7,"root_column":5,"root_url":"file:///Users/bartek/dev/random/flutter_test_json_reporter_bug/test/widget_test.dart"},"type":"testStart","time":1596}
+{"testID":4,"messageType":"print","message":"Incrementing counter fom 0 to 1","type":"print","time":2636}
+{"testID":4,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2775}
+{"test":{"id":5,"name":"Counter is decremented when minus is tapped","suiteID":0,"groupIDs":[2,3],"metadata":{"skip":false,"skipReason":null},"line":154,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":23,"root_column":5,"root_url":"file:///Users/bartek/dev/random/flutter_test_json_reporter_bug/test/widget_test.dart"},"type":"testStart","time":2776}
+{"testID":5,"messageType":"print","message":"Decrementing counter fom 0 to -1","type":"print","time":2890}
+{"testID":5,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2910}
+{"success":true,"type":"done","time":2929}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite errors="0" failures="0" tests="2" skipped="0" name=".Users.bartek.dev.random.flutter_test_json_reporter_bug.test.widget" timestamp="2022-10-22T10:11:37">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname=".Users.bartek.dev.random.flutter_test_json_reporter_bug.test.widget" name="Counter is incremented when plus is tapped" time="1.179">
+      <system-out>Incrementing counter fom 0 to 1</system-out>
+    </testcase>
+    <testcase classname=".Users.bartek.dev.random.flutter_test_json_reporter_bug.test.widget" name="Counter is decremented when minus is tapped" time="0.134">
+      <system-out>Decrementing counter fom 0 to -1</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
