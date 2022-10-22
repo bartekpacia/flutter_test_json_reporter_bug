@@ -7,7 +7,7 @@ void main() {
     testWidgets(
       'is incremented when plus is tapped',
       (WidgetTester tester) async {
-        await tester.pumpWidget(MyApp(counterSeed: 0));
+        await tester.pumpWidget(const MyApp());
 
         expect(find.text('0'), findsOneWidget);
         expect(find.text('1'), findsNothing);
@@ -23,7 +23,7 @@ void main() {
     testWidgets(
       'is decremented when minus is tapped',
       (WidgetTester tester) async {
-        await tester.pumpWidget(MyApp(counterSeed: 10));
+        await tester.pumpWidget(const MyApp());
 
         expect(find.text('0'), findsOneWidget);
         expect(find.text('-1'), findsNothing);
